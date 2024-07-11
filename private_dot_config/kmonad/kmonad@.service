@@ -1,0 +1,12 @@
+[Unit]
+Description=kmonad advanced keyboard daemon
+StopWhenUnneeded=true
+
+[Service]
+Restart=on-abort
+RestartSec=3
+ExecStart=-/usr/bin/kmonad /home/mnat/.config/kmonad/%i.kbd
+Nice=-20
+
+[Install]
+WantedBy=default.target
